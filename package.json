@@ -1,9 +1,5 @@
 {
   "dependencies": {
-<<<<<<< HEAD
-    "angularx-social-login": "^4.0.1",
-=======
->>>>>>> 6266f13ab573e917057b02221b808e54964ce643
     "classeviva": "^1.0.1",
     "classeviva-apiv2": "^2.0.2",
     "classeviva.js": "^1.2.0",
