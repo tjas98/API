@@ -33,7 +33,7 @@ app.use('/api', indexApi);
 const PORT = 3000;
 
 
-app.listen(PORT, '0.0.0.0', function() {
+app.listen(PORT, function() {
     console.log("Listening on port " + PORT);
 })
 
