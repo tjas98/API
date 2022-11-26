@@ -3,7 +3,6 @@ const request = require('request');
 const cors = require('cors')
 const mysql = require('mysql');
 const bodyParser = require("body-parser")
-const classeviva = require('classeviva')
 const passport = require('passport')
 const passportSetup = require('./api/config/passport')
 
