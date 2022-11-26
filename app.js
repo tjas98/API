@@ -30,7 +30,7 @@ app.get('/', (req, res) => {
 
 app.use('/api', indexApi);
 
-const PORT = 80;
+const PORT = 8080;
 
 
 app.listen(PORT, function() {
