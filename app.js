@@ -5,10 +5,20 @@ const mysql = require('mysql');
 const bodyParser = require("body-parser")
 const passport = require('passport')
 const passportSetup = require('./api/config/passport')
+var https = require('https');
+
+var privateKey  = fs.readFileSync('privatekey.pem', 'utf8');
+var certificate = fs.readFileSync('server.crt', 'utf8');
+
+var credentials = {key: privateKey, cert: certificate};
+
 
 app = express();
 
 var indexApi = require('./api/routes/index');
+var httpsServer = https.createServer(credentials, app);
+
+httpsServer.listen(8443);
 
 
  
