@@ -9,8 +9,8 @@ var https = require('https');
 var http = require('http')
 var fs = require('fs');
 
-var key = fs.readFileSync(__dirname + '/../certs/selfsigned.key');
-var cert = fs.readFileSync(__dirname + '/../certs/selfsigned.crt');
+var key = fs.readFileSync(__dirname + 'selfsigned.key');
+var cert = fs.readFileSync(__dirname + 'selfsigned.crt');
 
 var options = {
   key: key,
