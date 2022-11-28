@@ -19,6 +19,8 @@ app = express();
 var indexApi = require('./api/routes/index');
 var httpsServer = https.createServer(credentials, app);
 
+var httpServer = http.createServer(app);
+
 httpsServer.listen(8443);
 httpsServer.listen(8080);
 
