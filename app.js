@@ -6,6 +6,7 @@ const bodyParser = require("body-parser")
 const passport = require('passport')
 const passportSetup = require('./api/config/passport')
 var https = require('https');
+var http = require('http')
 var fs = require('fs');
 
 var privateKey  = fs.readFileSync('privatekey.pem', 'utf8');
