@@ -9,21 +9,19 @@ var https = require('https');
 var http = require('http')
 var fs = require('fs');
 
-var privateKey  = fs.readFileSync('privatekey.pem', 'utf8');
-var certificate = fs.readFileSync('server.crt', 'utf8');
+var key = fs.readFileSync(__dirname + '/../certs/selfsigned.key');
+var cert = fs.readFileSync(__dirname + '/../certs/selfsigned.crt');
 
-var credentials = {key: privateKey, cert: certificate};
+var options = {
+  key: key,
+  cert: cert
+};
 
 
 app = express();
 
 var indexApi = require('./api/routes/index');
-var httpsServer = https.createServer(credentials, app);
 
-var httpServer = http.createServer(app);
-
-httpsServer.listen(8443);
-httpsServer.listen(8080);
 
 
  
@@ -41,7 +39,13 @@ app.get('/', (req, res) => {
 
 app.use('/api', indexApi);
 
+var server = https.createServer(options, app);
+
 const PORT = 3000;
+
+server.listen(4000, () => {
+  console.log("server starting on port : " + port)
+});
 
 /*
 app.listen(PORT, function() {
