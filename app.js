@@ -44,7 +44,7 @@ var server = https.createServer(options, app);
 const PORT = 3000;
 
 server.listen(4000, () => {
-  console.log("server starting on port : " + port)
+  console.log("server starting on port : " + 4000)
 });
 
 /*
