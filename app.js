@@ -22,9 +22,6 @@ app = express();
 
 var indexApi = require('./api/routes/index');
 
-
-
- 
 app.use(bodyParser.json()) 
 
 app.use('/', (req, res, next) => {
@@ -39,16 +36,9 @@ app.get('/', (req, res) => {
 
 app.use('/api', indexApi);
 
-var server = https.createServer(options, app);
-
 const PORT = 3000;
 
-server.listen(4000, () => {
-  console.log("server starting on port : " + 4000)
-});
-
-/*
 app.listen(PORT, function() {
     console.log("Listening on port " + PORT);
-})*/
+})
 
