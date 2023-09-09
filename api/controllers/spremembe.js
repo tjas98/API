@@ -361,12 +361,12 @@ var potrdiProsto = async (req, res) => {
     var ura = req.body.ura;
 
     var a = UrnikPredmeti.findOne({razred: razred}).then(function(r) {
-        r[dan][ura] = 'prosto';
+        r[dan][ura] = '';
         r.save();
     })
 
     var b = Profesorji.findOne({razred: razred}).then(function(r) {
-        r[dan][ura] = 'prosto';
+        r[dan][ura] = '';
         r.save();
     })
 
