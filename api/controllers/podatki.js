@@ -15,6 +15,8 @@ const Spremembe = model.Sprememba;
 const Suplenti = model.Suplenti;
 const Admin = model.Admins;
 
+const Placilo = model.Placal
+
 // Vsi profesorji
 var vsiProfesorji = (req, res) => {
     var quer = StalenZaProfesorja.find({}).select({ "profesor": 1, "_id": 0});
@@ -321,6 +323,35 @@ var urnikVsehProf = (req, res) => {
     })
 }
 
+var placilo = (req, res) => {
+
+    var mail = req.body.mail;
+
+    console.log(mail)
+
+    Placilo.findOne({mail: mail}).then(r => {
+        res.send(r)
+    })
+    
+}
+
+var jePlacal = (req, res) => {
+    var mail = req.body.mail
+    var name = req.body.name
+
+    var placilec = new Placilo({
+        mail: mail,
+        name: name
+    })
+
+    placilec.save()
+
+    console.log(mail, name)
+
+    
+
+}
+
 module.exports = {
     mailDijaka,
     najdiUrnik,
@@ -342,6 +373,8 @@ module.exports = {
     ure,
     kopiraj,
     urnikVsehProf,
-    stalenStalenUrnik
+    stalenStalenUrnik,
+    placilo,
+    jePlacal
 
 }

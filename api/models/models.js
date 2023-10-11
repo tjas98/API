@@ -256,6 +256,10 @@ var StalenStalenZaProfesorjaSchema = new mongoose.Schema({
     collection: '4 - Stalen_za_profesorja'
 })
 
+var PlacalSchema = new mongoose.Schema({
+    mail: String
+
+})
 
 var MailSchema = new mongoose.Schema({
     profesor: String,
@@ -297,6 +301,8 @@ const StalenStalenDijaki = mongoose.model('StalenStalenDijaki', StalenStalenDija
 const StalenStalenProfeosorji = mongoose.model(' StalenStalenProfeosorji', StalenStalenProfesorjiSchema)
 const StalenStalenZaProfesorja = mongoose.model('StalenStalenZaProfesorja', StalenStalenZaProfesorjaSchema)
 
+const Placal = mongoose.model("Placal", PlacalSchema)
+
 //var conn = mongoose.createConnection('mongodb+srv://urnik:UrnikPreseren@urnik.vpq0cxv.mongodb.net/test')
 //var Database_dijaki    = conn.model('Dijaki', SpremembeDijakiSchema);
 //var Database_prof   = conn.model('Prof', SpremembeProfesorjiSchema);
@@ -325,7 +331,8 @@ module.exports = {
     Mail,
     StalenStalenDijaki,
     StalenStalenProfeosorji,
-    StalenStalenZaProfesorja
+    StalenStalenZaProfesorja,
+    Placal
     //Database_dijaki,
     //Database_prof,
     //Database_za_profesorja

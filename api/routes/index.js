@@ -111,6 +111,8 @@ router.get('/prova1/:array', (req, res) => {
 
 
 
+router.post("/placilo", podatki.placilo)
+router.post("/jePlacal", podatki.jePlacal)
 
 
 
