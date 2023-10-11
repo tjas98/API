@@ -9,13 +9,6 @@ var https = require('https');
 var http = require('http')
 var fs = require('fs');
 
-var key = fs.readFileSync('selfsigned.key');
-var cert = fs.readFileSync('selfsigned.crt');
-
-var options = {
-  key: key,
-  cert: cert
-};
 
 // aa
 
