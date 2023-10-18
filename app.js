@@ -31,7 +31,7 @@ app.get('/', (req, res) => {
 
 app.use('/api', indexApi);
 
-const PORT = 3000;
+const PORT = 8080;
 
 app.listen(PORT, function() {
     console.log("Listening on port " + PORT);
