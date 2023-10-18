@@ -1,6 +1,10 @@
 const mongoose = require('mongoose');
 
+<<<<<<< HEAD
 const url = "mongodb://localhost:27017/test";
+=======
+const url = "mongodb://localhost:27017";
+>>>>>>> f23553786d42866aeec10c997504fa2595eadd88
 //const url = "mongodb://3.70.237.147/:27017";
 
 
